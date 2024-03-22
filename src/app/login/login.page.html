@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">PokeRauw</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-img class="logo"
+      [src]="'assets/icon/logo.png'"
+      alt="The Wisconsin State Capitol building in Madison, WI at night"
+    ></ion-img>
+  </div>
+
+  <form #form="ngForm">
+    <div class="inputs">
+      <ion-input 
+        name="correo" 
+        label="Correo" 
+        label-placement="floating" 
+        fill="outline" 
+        placeholder="Ingrese su correo"
+        type="email"
+        helperText="Ingresa un correo válido"
+        errorText="Correo inválido"
+        [(ngModel)]="correoIngresado"
+        pattern="[a-zA-Z0-9._-]+@utcv\.edu\.mx"
+        required
+        email
+      ></ion-input>
+      <ion-input 
+        name="contrasena" 
+        label="Contraseña" 
+        label-placement="floating" 
+        fill="outline"
+        placeholder="Ingrese su contraseña"
+        type="password"
+        helperText="Ingresa una contraseña con mínimo 8 carácteres"
+        errorText="Contraseña inválida"
+        ngModel
+        required
+        minlength="8"
+      ></ion-input>
+    </div>
+
+    <div class="boton">
+      <ion-button color="danger" [disabled]="!form.valid" (click)="navigateToWelcome()">
+        ENTRAR
+        <ion-icon size="large" slot="end" name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </form>
+</ion-content>

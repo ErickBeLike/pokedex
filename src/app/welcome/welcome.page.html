@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="primary">
+      <ion-button fill="solid" color="danger" (click)="cerrarSesion()">
+        SALIR
+        <ion-icon slot="end" name="exit-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="large">PokeRauw</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content">
+  <ion-title>Bienvenido, {{ correoIngresado }}!</ion-title>
+  <div class="todo">
+    <div class="container">
+      <ion-img class="rauw" [src]="'assets/icon/rauw.jpg'"></ion-img>
+      <div class="labels-container">
+        <ion-label class="label">Entrenador: Rauleeto</ion-label>
+        <ion-label class="label">Nivel: 69</ion-label>
+        <ion-label class="label">Pokemones encontrados: 123</ion-label>
+        <ion-label class="label">Pokemones capturados: 86</ion-label>
+      </div>
+    </div>
+
+    <div class="containereve">
+      <ion-card>
+        <img alt="Silhouette of mountains" [src]="'assets/icon/zorro.png'" class="zorrito-img" />
+        <ion-card-header>
+          <ion-card-title>Pokemon Favorito:</ion-card-title>
+          <ion-card-subtitle>Eve</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+      <div class="card-container">
+        <ion-card>
+          <img alt="Silhouette of mountains" [src]="'assets/icon/pokedex.png'" class="pokedex-img" />
+          <ion-card-header>
+            <ion-card-title>
+              <ion-button class="pokedex-button" color="danger" (click)="pokedex()">
+                POKEDEX
+                <ion-icon slot="end" name="invert-mode-outline"></ion-icon>
+              </ion-button>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Entra a tu Pokedex!
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+</ion-content>
